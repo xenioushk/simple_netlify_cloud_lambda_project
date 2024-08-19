@@ -157,8 +157,6 @@ section {
   font-weight: 400;
   text-align: center;
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .btn:hover {
@@ -285,10 +283,8 @@ nav {
 }
 .header_nav__link--active {
   -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
   background-clip: padding-box;
   padding: 6px 6px;
   display: block;
@@ -391,14 +387,10 @@ box-icon {
     background: none;
     color: #371447;
     -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
     border-radius: 4px;
     -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
     background-clip: padding-box;
     -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
   .header_nav--active {
@@ -406,10 +398,8 @@ box-icon {
     background: #662483;
     color: #ffffff;
     -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
     border-radius: 4px;
     -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
     background-clip: padding-box;
   }
   .header_lang {
@@ -729,11 +719,8 @@ box-icon {
   padding-top: 0;
   margin-bottom: 24px;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .news-card__featured_image {
@@ -784,4 +771,10 @@ box-icon {
   .news-card__featured_image {
     position: relative;
   }
+}
+.secret_form input[type=text] {
+  padding: 6px;
+}
+.secret_form input[type=password] {
+  padding: 12px 6px;
 }
