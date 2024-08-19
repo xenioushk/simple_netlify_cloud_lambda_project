@@ -8,3 +8,7 @@ import SecretForm from "./scripts/modules/SecretForm"
 // Call All JS Classes.
 // new Menu()
 new SecretForm()
+
+// Access environment variables
+// console.log("API URL:", process.env.S3_BUCKET)
+// console.log("Environment:", process.env.SECRET_KEY)

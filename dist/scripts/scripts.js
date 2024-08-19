@@ -42,7 +42,7 @@ var SecretForm = /*#__PURE__*/function () {
     key: "handleFormSubmission",
     value: function handleFormSubmission(e) {
       var _this2 = this;
-      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post("https://snclp.netlify.app/.netlify/functions/secret-area", {
+      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post("MISSING_ENV_VAR".API_URL, {
         password: this.passwordField.value
       }).then(function (response) {
         _this2.secretForm.remove();
@@ -4843,5 +4843,9 @@ __webpack_require__.r(__webpack_exports__);
 // Call All JS Classes.
 // new Menu()
 new _scripts_modules_SecretForm__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+// Access environment variables
+// console.log("API URL:", process.env.S3_BUCKET)
+// console.log("Environment:", process.env.SECRET_KEY)
 /******/ })()
 ;

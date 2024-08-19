@@ -18,7 +18,7 @@ class SecretForm {
 
   handleFormSubmission(e) {
     axios
-      .post("https://snclp.netlify.app/.netlify/functions/secret-area", {
+      .post(process.env.API_URL, {
         password: this.passwordField.value,
       })
       .then((response) => {

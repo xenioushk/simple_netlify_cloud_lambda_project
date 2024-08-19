@@ -1,10 +1,13 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const Dotenv = require("dotenv-webpack")
 const configuration = {
   port: 3000, // this is browserSync Port
 }
 
-const PluginSettings = []
+const PluginSettings = [
+  new Dotenv(), // Load environment variables from .env file
+]
 
 PluginSettings.push(new MiniCssExtractPlugin({ filename: "styles/styles.css" }))
 
