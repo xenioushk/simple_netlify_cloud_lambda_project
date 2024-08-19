@@ -1,4 +1,4 @@
-# Evermade Superpark Template Assignment
+# A Simple Netlify Cloud Lambda Project
 
 - [Check Demo](https://xenioushk.github.io/simple_netlify_cloud_lambda_project/)
 
