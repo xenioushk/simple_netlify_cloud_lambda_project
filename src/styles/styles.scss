@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap");
+
+// Base Elements.
+@import "./base/variables.scss";
+@import "./base/mixins.scss";
+@import "./base/global";
+@import "./base/grid";
+@import "./base/utility";
+
+// Template Blocks
+@import "./modules/shared/header";
+@import "./modules/blocks/hero";
+@import "./modules/blocks/video";
+@import "./modules/blocks/news";

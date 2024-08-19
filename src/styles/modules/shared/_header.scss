@@ -1,0 +1,244 @@
+header {
+  clear: both;
+}
+
+.logo {
+  color: $dark-text-color;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__img {
+    display: inline-block;
+  }
+}
+
+// Nav
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+  margin: 0rem 0 0 0;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.header_nav {
+  display: none;
+  order: 1;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.75rem;
+
+  li {
+    display: block;
+    text-align: center;
+    margin-left: 0rem;
+  }
+
+  &__link {
+    display: block;
+    margin: 0px 0;
+    padding: 6px 6px;
+    font-weight: 300;
+    color: $primary-color;
+    // letter-spacing: 0.1rem;
+    &:hover {
+      color: darken($primary-color, 20%);
+      background: darken($light-bg, 1%);
+    }
+
+    &--active {
+      @include round(4px);
+      padding: 6px 6px;
+      display: block;
+      background: $primary-color;
+      color: $light-text-color;
+    }
+  }
+}
+
+// Language
+
+.header_lang {
+  display: none;
+  order: 3;
+  // display: block;
+  list-style-type: none;
+  margin-bottom: 0px;
+  text-align: center;
+  background: darken($light-bg, 6%);
+  padding: 6px 0 12px 0;
+  border-radius: 2px 0px 10px 10px;
+  li {
+    display: inline-block;
+    flex-basis: 32px;
+    margin: 0 6px;
+    a {
+      font-weight: 200;
+      flex-direction: row;
+    }
+  }
+}
+
+.nav_cta {
+  // display: block;
+  order: 2;
+  flex-direction: row;
+  padding: 12px 0;
+  margin: 0px;
+  text-align: center;
+  display: none;
+  background: darken($light-bg, 6%);
+}
+
+box-icon {
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.showmenu {
+  background: darken($light-bg, 6%);
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-top: 6px;
+}
+
+box-icon {
+  display: block;
+}
+
+// Responsive
+
+@media (min-width: 576px) {
+  // box-icon {
+  //   display: block;
+  // }
+  // nav {
+  //   flex-direction: column;
+  //   position: relative;
+  // }
+}
+
+// Large screen
+@media (min-width: 1100px) {
+  .logo {
+    color: $dark-text-color;
+
+    &__img {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    &__title {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    &__subtitle {
+      font-size: 0.85rem;
+      color: $default-font-color;
+    }
+  }
+
+  nav {
+    padding: 0;
+    margin: 0.5rem 0 0.5rem 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .header_nav {
+    display: flex;
+    list-style-type: none;
+    margin-top: 0;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    a {
+      padding: 0.13rem;
+      color: $primary-color;
+
+      &:hover {
+        background: none;
+        color: darken($primary-color, 15%);
+        @include round(4px);
+        @include transition(all, 0.2s);
+      }
+    }
+
+    &--active {
+      font-weight: 600;
+      background: $primary-color;
+      color: $light-text-color;
+      @include round(4px);
+    }
+  }
+
+  .header_lang {
+    order: 1;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    background: transparent;
+    li {
+      display: inline-block;
+      margin-right: 18px;
+      position: relative;
+      a {
+        color: $primary-color;
+        font-weight: 200;
+        color: $dark-text-color;
+      }
+
+      &::after {
+        width: 4px;
+        height: 4px;
+        display: block;
+        content: "/";
+        position: absolute;
+        top: 0;
+        right: -16px;
+        margin: 0 6px;
+        font-weight: 200;
+      }
+      &:last-child {
+        margin-right: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .nav_cta {
+    background: transparent;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  box-icon {
+    display: none;
+  }
+}
